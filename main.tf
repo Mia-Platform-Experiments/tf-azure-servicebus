@@ -28,11 +28,3 @@ resource "azurerm_servicebus_queue" "queues" {
   name         = each.value
   namespace_id = azurerm_servicebus_namespace.main.id
 }
-
-# Create Service Bus Topics
-resource "azurerm_servicebus_topic" "topics" {
-  for_each = toset(var.topic_names)
-
-  name         = each.value
-  namespace_id = azurerm_servicebus_namespace.main.id
-}

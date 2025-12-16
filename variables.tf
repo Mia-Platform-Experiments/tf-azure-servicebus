@@ -28,9 +28,3 @@ variable "queue_names" {
   type        = list(string)
   default     = []
 }
-
-variable "topic_names" {
-  description = "List of Service Bus topic names to create."
-  type        = list(string)
-  default     = []
-}

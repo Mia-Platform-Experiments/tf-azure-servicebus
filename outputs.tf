@@ -12,8 +12,3 @@ output "queue_names" {
   description = "List of created queue names."
   value       = [for q in azurerm_servicebus_queue.queues : q.name]
 }
-
-output "topic_names" {
-  description = "List of created topic names."
-  value       = [for t in azurerm_servicebus_topic.topics : t.name]
-}
